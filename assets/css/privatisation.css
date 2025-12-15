@@ -1,21 +1,36 @@
+:root {
+    --bg-text-color: #2C3E50;
+    --bg-secondary: #cc7a2e;
+    --size-input: 1.1rem;
+}
+
+/* ================================ PAGES ================================ */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+    scrollbar-color: var(--bg-secondary) var(--bg-text-color);
+    scrollbar-width: thin;
+    background-color: var(--bg-text-color);
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-size: 1.2rem;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    color: var(--bg-text-color) ;
+    padding: 50px 20px;
+    background: url(../image/food_truck_event.jpg) no-repeat center center/cover;
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,8 +39,8 @@ main {
 }
 
 form {
-    background-color: aliceblue;
-    border: 2px solid black;
+    width: 60%;
+    background-color: var(--bg-secondary);
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -35,30 +50,80 @@ form {
 
 h2 {
     text-align: center;
+    color: var(--bg-text-color);
 }
 
-input[type="number"] {
-    width: 50px;
+/* =========================== FORMULES DISPONIBLES =========================== */
+
+.nbr-personne > input{
+    width: 65px;
 }
 
-select {
-    font-size: 1.1rem;
+/* ================================ CONTACTS ================================ */
+
+#contacts > section {
+    margin: 10px;
 }
 
-#nom-prenom{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+/* ======= NOM & PRENOM ======= */
+.nom-prenom > #nom-prenom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
-#nom-prenom > #nom {
-    grid-column-start: 1;
-    grid-column-end: 2;
+.nom-prenom > label {
+    font-weight: 800;
 }
 
-input {
-    padding: 5px;
+.nom-prenom > #nom-prenom > input {
+    width: 50%;
+}
+
+/* ======= ADRESSE MAIL & TELEPHONE ======= */
+.info {
+    display: flex;
+    gap: 10px;
+}
+
+.email, .telephone {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* ======= DATE/HOUR ======= */
+.date-hour {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ========================== INPUT/TEXTAREA/LABEL ========================== */
+
+/* ======= INPUT/SELECT/TEXTAREA ======= */
+input, select, textarea {
+    padding: 7px;
     border: none;
-    border-bottom: 1px solid black;
-    background-color: rgba(196, 226, 252, 0.317);
+    border-bottom: 2px solid var(--bg-text-color);
+    background-color: rgba(255, 255, 255, 0.106);
+    font-size: var(--size-input);
+    color: white;
+}
+
+/* ======= TEXTAREA ======= */
+textarea {
+    height: 200px;
+}
+
+/* ======= LABEL ======= */
+label {
+    font-weight: 800;
+}
+
+/* ======= SCROLLBAR ======= */
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
