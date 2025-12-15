@@ -14,7 +14,7 @@
 
 
     <main>
-        <form action="" id="form-dispo">
+        <form action="" id="formulaire">
             <h2>Les formules disponibles</h2>
 
             <label for="intervention-site">Intervention sur site</label>
@@ -36,26 +36,39 @@
             </div>
 
             <div class="tarif">
-
             </div>
         </form>
 
-        <form action="" id="contac">
+        <!-- ========================CONTACT======================== -->
+        <form action="" id="contacts">
             <h2>Contacts</h2>
 
-            <div id="nom-prenom">
+            <section class="nom-prenom">
                 <label for="nom-prenom">Nom et Prénom</label>
-                <input type="text" placeholder="Nom" id="nom">
-                <input type="text" placeholder="Prénom" id="prenom">
-            </div>
+                <div id="nom-prenom">
+                    <input type="text" placeholder="Nom" id="nom">
+                    <input type="text" placeholder="Prénom" id="prenom">
+                </div>
+            </section>
 
-            <label for="email">Adresse mail</label>
-            <input type="email">
+            <section class="info">
+                <div class="email">
+                    <label for="email">Adresse mail</label>
+                    <input type="email">
+                </div>
 
-            <label for="telephone">Numéro</label>
-            <input type="text">
+                <div class="telephone">
+                    <label for="telephone">Numéro</label>
+                    <input type="text">
+                </div>
+            </section>
 
-            <div class="evenement">
+            <section>
+                <label for="ville">Ville</label>
+                <input type="text">
+            </section>
+
+            <section class="evenement">
                 <label for="event">Les événements proposés</label>
                 <select name="event" id="event">
                     <option value="evenement1">evenement1</option>
@@ -64,7 +77,7 @@
                     <option value="evenement4">evenement4</option>
                     <option value="evenement5">evenement5</option>
                 </select>
-            </div>
+            </section>
 
             <section class="date-hour">
                 <div class="date">
@@ -73,7 +86,7 @@
                 </div>
 
                 <div class="hour">
-                    <label for="hour">De :</label>
+                    <label for="hour">; De :</label>
                     <input type="time" name="debut" id="debut">
                     <label for="hour">à</label>
                     <input type="time" name="end" id="end">
