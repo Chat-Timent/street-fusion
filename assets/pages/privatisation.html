@@ -7,6 +7,7 @@
     <title>Page privatisation</title>
 
     <link rel="stylesheet" href="../css/privatisation.css">
+    <script src="../js/privatisation.js" defer></script>
 </head>
 
 <body>
@@ -40,22 +41,31 @@
             </div>
         </form>
 
+        <!-- CONTACTS -->
         <form action="" id="contac">
             <h2>Contacts</h2>
 
-            <div id="nom-prenom">
+            <section class="nom-prenom">
                 <label for="nom-prenom">Nom et Prénom</label>
-                <input type="text" placeholder="Nom" id="nom">
-                <input type="text" placeholder="Prénom" id="prenom">
-            </div>
+                <div id="nom-prenom-input">
+                    <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
+                    <input type="text" placeholder="Votre prénom" id="prenom" name="prenom" required>
+                </div>
+            </section>
 
-            <label for="email">Adresse mail</label>
-            <input type="email">
+            <section class="email-telephone">
+                <div id="email">
+                    <label for="email">Adresse mail</label>
+                    <input type="email" required>
+                </div>
 
-            <label for="telephone">Numéro</label>
-            <input type="text">
+                <div id="telephone">
+                    <label for="telephone">Numéro</label>
+                    <input type="tel" id="phone" name="phone" pattern="(\d{2}\s){4}\d{2}" required>
+                </div>
+            </section>
 
-            <div class="evenement">
+            <section class="evenement">
                 <label for="event">Les événements proposés</label>
                 <select name="event" id="event">
                     <option value="evenement1">evenement1</option>
@@ -64,19 +74,19 @@
                     <option value="evenement4">evenement4</option>
                     <option value="evenement5">evenement5</option>
                 </select>
-            </div>
+            </section>
 
             <section class="date-hour">
                 <div class="date">
                     <label for="date">Le :</label>
-                    <input type="date">
+                    <input type="date" required>
                 </div>
 
                 <div class="hour">
                     <label for="hour">De :</label>
-                    <input type="time" name="debut" id="debut">
+                    <input type="time" name="debut" id="debut" required>
                     <label for="hour">à</label>
-                    <input type="time" name="end" id="end">
+                    <input type="time" name="end" id="end" required>
                 </div>
             </section>
 
@@ -84,6 +94,10 @@
             <textarea name="message" id="message">
 
             </textarea>
+
+            <div id="bouton">
+                <button type="submit">Envoyer</button>
+            </div>
         </form>
     </main>
 </body>
