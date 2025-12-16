@@ -3,7 +3,8 @@
     --bg-card: #E67E22;
     --text-color: #ECF0F1;
     --color-jsp: #2ECC71;
-    --size-input: 1.1rem;
+    --text-size-input: 1.1rem;
+    --text-size: 1.3rem
 }
 
 /* ======================== PAGES ======================== */
@@ -22,7 +23,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    font-size: 1.2rem;
+    font-size: var(--text-size);
     background: url(../image/food_truck_event.jpg) no-repeat center center/cover;
     color: var(--bg-text-color);
     padding: 40px;
@@ -36,7 +37,51 @@ main {
     gap: 60px;
 }
 
-form {
+h1 {
+    color: var(--text-color);
+}
+
+/* ======================== NOS FORMULES DISPONIBLES ======================== */
+
+#formules {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#formules > section {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-formule > h2 {
+    margin-bottom: 9px;
+}
+
+h3 {
+    margin: 9px;
+}
+
+.option {
+    list-style: none;
+    margin: 3px;
+}
+
+
+.card-formule > div {
+    margin-top: auto;
+    font-size: 1.05rem;
+    border-top: 2px solid var(--color-jsp);
+}
+
+/* ======================== CONTACTS ======================== */
+
+#contact {
     width: 70%;
     background-color: var(--bg-card);
     border-radius: 15px;
@@ -46,27 +91,15 @@ form {
     justify-content: center;
 }
 
-h2 {
+#contact > h2 {
     text-align: center;
 }
 
-/* ======================== LES FORMULES DISPONIBLES ======================== */
-
-input[type="number"] {
-    width: 50px;
-}
-
-select {
-    font-size: 1.1rem;
-}
-
-/* ======================== CONTACTS ======================== */
-
-/* ====== NOM & PRENOM ====== */
-
-section {
+#contact > section {
     margin: 10px;
 }
+
+/* ====== NOM & PRENOM ====== */
 
 .nom-prenom{
     display: flex;
@@ -108,14 +141,18 @@ section {
     border-color: #cc2e2e;
 }
 
+.date-hour {
+    display: flex;
+}
+
 /* ======================== INPUTS/LABEL/SELECT/TEXTAREA ======================== */
 
-input, textarea {
+input, textarea, select {
     padding: 7px;
     border: none;
     border-bottom: 2px solid black;
     background-color: rgba(255, 255, 255, 0.097);
-    font-size: var(--size-input);
+    font-size: var(--text-size-input);
     color: var(--text-color);
 }
 
@@ -137,9 +174,11 @@ textarea {
 button {
     width: fit-content;
     background-color: var(--color-jsp);
+    color: var(--bg-text-color);
     padding: 17px;
     border: none;
     font-size: 1.5rem;
+    font-weight: 800;
     border-radius: 10px;
 }
 

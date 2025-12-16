@@ -15,34 +15,62 @@
 
 
     <main>
-        <form action="" id="form-dispo">
-            <h2>Les formules disponibles</h2>
+        <h1>Nos formules disponibles</h1>
 
-            <label for="intervention-site">Intervention sur site</label>
+        <!-- FORMULES -->
 
-            <div class="nbr-personne">
-                <label for="nbr-personne">Nombre de personnes minimum</label>
-                <input type="number" id="nbr-pesonne">
-            </div>
+        <article id="formules">
+            <section class="formule1 card-formule">
+                <h2>Formule étudiante</h2>
+                <p>Pour les écoles, universités, lycées</p>
+                <h3>À partir de 600€</h3>
+                <ul>
+                    <li class="option">15 personnes minimums</li>
+                    <li class="option">Plats + Boissons*</li>
+                    <li class="option">6€/personnes</li>
+                    <li class="option">option 4</li>
+                    <li class="option">option 5</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
 
-            <div class="menu">
-                <label for="menu">Les menus disponibles</label>
-                <select name="menu" id="menu">
-                    <option value="menu1">menu1</option>
-                    <option value="menu2">menu2</option>
-                    <option value="menu3">menu3</option>
-                    <option value="menu4">menu4</option>
-                    <option value="menu5">menu5</option>
-                </select>
-            </div>
+            <section class="formule2 card-formule">
+                <h2>Formule événements</h2>
+                <p>Mariage, anniversaire, ....</p>
+                <h3>À partir de 800€</h3>
+                <ul>
+                    <li class="option">25 personnes minimums</li>
+                    <li class="option">Entrées + Plats + Desserts*</li>
+                    <li class="option">15€/personnes</li>
+                    <li class="option">option 4</li>
+                    <li class="option">option 5</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
 
-            <div class="tarif">
-
-            </div>
-        </form>
+            <section class="formule3 card-formule">
+                <h2>La formule 3</h2>
+                <p>petite description</p>
+                <h3>À partir de ???€</h3>
+                <ul>
+                    <li class="option">option 1</li>
+                    <li class="option">option 2</li>
+                    <li class="option">option 3</li>
+                    <li class="option">option 4</li>
+                    <li class="option">option 5</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
+        </article>
 
         <!-- CONTACTS -->
-        <form action="" id="contac">
+        <form action="" id="contact">
             <h2>Contacts</h2>
 
             <section class="nom-prenom">
@@ -66,13 +94,11 @@
             </section>
 
             <section class="evenement">
-                <label for="event">Les événements proposés</label>
+                <label for="event">La formule voulu</label>
                 <select name="event" id="event">
-                    <option value="evenement1">evenement1</option>
-                    <option value="evenement2">evenement2</option>
+                    <option value="evenement1">Formule étudiante</option>
+                    <option value="evenement2">Formule événements</option>
                     <option value="evenement3">evenement3</option>
-                    <option value="evenement4">evenement4</option>
-                    <option value="evenement5">evenement5</option>
                 </select>
             </section>
 
@@ -83,7 +109,7 @@
                 </div>
 
                 <div class="hour">
-                    <label for="hour">De :</label>
+                    <label for="hour">; De :</label>
                     <input type="time" name="debut" id="debut" required>
                     <label for="hour">à</label>
                     <input type="time" name="end" id="end" required>
