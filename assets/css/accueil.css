@@ -137,6 +137,127 @@ a:visited {
     padding-bottom: 30px;
 }
 
+#news-section {
+    position: relative;
+    background-color: #F8F9FA; 
+    padding: 80px 50px;
+    text-align: center;
+    z-index: 10;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2C3E50;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.tag-limited { background-color: #DB7324; }
+.tag-event { background-color: #E67E22; }
+.tag-promo { background-color: #D35400; }
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #7F8C8D;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.news-link {
+    color: #2C3E50;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.news-link:hover {
+    color: #DB7324;
+}
+
+.cta-banner {
+    background-color: #34495E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    z-index: 7;
+    position: relative;
+}
+
+.cta-banner p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.btn-planning {
+    background-color: #DB7324;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-planning:hover {
+    background-color: #E67E22;
+}
+
+
 .bottom-bar {
     position: relative;
     width: 100%;
