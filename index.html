@@ -6,26 +6,75 @@
     <title>Street Fusion</title>
     <link rel="stylesheet" href="assets/css/accueil.css">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./assets/js/accueil.js" defer></script>
     <!-- ça permet d'accéder aux polices de googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div id="topbar">
+    <header id="topbar">
         <img class="topbar-logo" src="assets/image/logo.svg" alt="image logo">
         <nav class="topbar-nav-links">
-            <p>topbar1</p>
-            <p>topbar2</p>
-            <p>topbar3</p>
+            
+            <a href="index.html">Accueil</a>
+            <a href="./assets/pages/menu.html">Menu</a>
+            <a href="./assets/pages/localisation.html">Localisation</a>
+            <a href="./assets/pages/privatisation.html">Privatisation</a>
         </nav>
-    </div>
+    </header>
 
     <section id="hero-section">
-        <p>Phrase d'accroche ici</p>
+        <p class="hero-title">Le monde au coin de la rue,</br>l'excellence dans l'assiette.</p>
+        <p class="hero-description">Une cuisine de rue audacieuse, locale et 100% fait maison</br>par Sarah Martinez.</p>
         <img class="hero-bg-image" src="assets/image/street_food_7.jpg" alt="">
     </section>
+    
+    <section id="main-section">
+        <div id="main-content">
+            <p><span class="main-content-title">Bienvenue chez Street Fusion.</span>
+            </br><span class="main-content-desc">Née de la passion de la cheffe Sarah Martinez pour les voyages et la gastronomie, notre cuisine casse les codes traditionnels. </br>Notre mission ? Réconcilier la rapidité de la street food avec la finesse d'un plat gastronomique.</br>Ici, le Mexique rencontre le Japon, et les États-Unis embrassent la Méditerranée.</span></p>
+        </div>
+        <div class="categories">
+            <div class="category fraicheur">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Pas de congélateur chez nous. Tout</br>nos aliments sont découpés le matin</br>même.</p>
+            </div>
+            <div class="category local">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Nous soutenons nos producteurs</br>régionaux. Viande française et pain</br> artisan boulanger.</p>
+            </div>
+            <div class="category maison">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <p>Des sauces mijotées aux marinades</br>secrètes, tout est préparé avec amour</br>dans notre cuisine mobile.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bottom-bar">
+        <div class="bottom-bar-content">
+            <div class="contact">
+                <h2 class="title-footer">Nous retrouver :</h2>
+                <p>Place de la Cathédrale</p>
+                <p>28000 Chartres</p>
+                <p>02 37 21 50 00</p>
+                <p>streetfusion@gmail.com</p>
+            </div>
+            <div class="reseaux">
+                <h2 class="title-footer">Nos réseaux :</h2>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="text-jsp">
+                <p>Tout droit réservé © 2025 Street Fusion</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

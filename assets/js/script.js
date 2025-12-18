@@ -5,7 +5,7 @@ const menu = [
         choix: "Burger",
         description: "Burger classique avec steak, salade, tomate et sauce maison",
         prix: 8.99,
-        image : "./assets/image/AdobeStock_301644355.jpeg",
+        image : "../image/AdobeStock_301644355.jpeg",
     },
     { 
         id: 2,
@@ -13,7 +13,7 @@ const menu = [
         choix: "Burger",
         description: "Burger au fromage à raclette, jambon cru et oignons caramélisés avec son double steak",
         prix: 10.99,
-        image : "./assets/image/street_food_2.jpg",
+        image : "../image/street_food_2.jpg",
     },
     { 
         id: 3,
@@ -21,7 +21,7 @@ const menu = [
         choix: "Burger",
         description: "Burger au kebab, sauce blanche, salade, tomates et oignons pour les vraies Hommes",
         prix: 11.99,
-        image : "./assets/image/street_food_3.jpg",
+        image : "../image/street_food_3.jpg",
     },
     { 
         id: 4,
@@ -29,7 +29,7 @@ const menu = [
         choix: "Tacos",
         description: "Tacos crevette avec sa sauce au grumaux",
         prix: 7.99,
-        image : "./assets/image/street_food_4.jpg",
+        image : "../image/street_food_4.jpg",
     },
     { 
         id: 5,
@@ -37,7 +37,7 @@ const menu = [
         choix: "Tacos",
         description: "Tacos viande hachée trop cuite épicée et fromage fondu",
         prix: 8.99,
-        image : "./assets/image/street_food_5.jpg",
+        image : "../image/street_food_5.jpg",
     },
     { 
         id: 6,
@@ -45,7 +45,7 @@ const menu = [
         choix: "Tacos",
         description: "Tacos aux légumes grillés et guacamole",
         prix: 7.49,
-        image : "./assets/image/street_food_6.jpg",
+        image : "../image/street_food_6.jpg",
     },
     { 
         id: 7,
@@ -53,7 +53,7 @@ const menu = [
         choix: "Accompagnements",
         description: "Frites fraîches coupées à la main",
         prix: 3.99,
-        image : "./assets/image/street_food_7.jpg",
+        image : "../image/street_food_7.jpg",
     },
     { 
         id: 8,
@@ -61,7 +61,7 @@ const menu = [
         choix: "Accompagnements",
         description: "Rondelles d'oignons panées et croustillantes",
         prix: 4.49,
-        image : "./assets/image/street_food_8.jpg",
+        image : "../image/street_food_8.jpg",
     },
     { 
         id: 9,
@@ -69,7 +69,7 @@ const menu = [
         choix: "Accompagnements",
         description: "Salade fraîche avec sauce césar et parmesan",
         prix: 5.99,
-        image : "./assets/image/street_food_9.jpg",
+        image : "../image/street_food_9.jpg",
     },
     { 
         id: 10,
@@ -77,7 +77,7 @@ const menu = [
         choix: "boissons",
         description: "Boisson gazeuse classique 33cl",
         prix: 2.50,
-        image : "./assets/image/street_food_10.jpg",
+        image : "../image/street_food_10.jpg",
     },
     { 
         id: 11,
@@ -85,7 +85,7 @@ const menu = [
         choix: "boissons",
         description: "une boisson fait de bannane et de citron 25cl",
         prix: 2.50,
-        image : "./assets/image/street_food_10.jpg",
+        image : "../image/street_food_10.jpg",
     },
     { 
         id: 12,
@@ -93,7 +93,7 @@ const menu = [
         choix: "boissons",
         description: "Jus d'orange frais pressé avec une touche de cacahuète 25cl",
         prix: 3.50,
-        image : "./assets/image/street_food_10.jpg",
+        image : "../image/street_food_10.jpg",
     },
 ]
 

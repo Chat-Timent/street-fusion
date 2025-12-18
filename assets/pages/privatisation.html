@@ -7,76 +7,124 @@
     <title>Page privatisation</title>
 
     <link rel="stylesheet" href="../css/privatisation.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../js/privatisation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tiny5&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!--TOP BAR-->
+    <header id="topbar">
+        <img class="topbar-logo" src="../image/logo.svg" alt="image logo">
+        <nav class="topbar-nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="localisation.html">Localisation</a>
+            <a href="privatisation.html">Privatisation</a>
+        </nav>
+    </header>
 
 
     <main>
-        <form action="" id="form-dispo">
-            <h2>Les formules disponibles</h2>
+        <h1>Nos formules disponibles</h1>
 
-            <label for="intervention-site">Intervention sur site</label>
+        <!-- FORMULES -->
 
-            <div class="nbr-personne">
-                <label for="nbr-personne">Nombre de personnes minimum</label>
-                <input type="number" id="nbr-pesonne">
-            </div>
+        <article id="formules">
+            <section class="formule1 card-formule">
+                <h2>Formule étudiante</h2>
+                <p>Pour les écoles, universités, lycées</p>
+                <h3>À partir de 350€</h3>
+                <ul>
+                    <li class="option">15 personnes minimums</li>
+                    <li class="option">Plats + Boissons*</li>
+                    <li class="option">6€/personnes</li>
+                    <li class="option">Menu peu cher</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
 
-            <div class="menu">
-                <label for="menu">Les menus disponibles</label>
-                <select name="menu" id="menu">
-                    <option value="menu1">menu1</option>
-                    <option value="menu2">menu2</option>
-                    <option value="menu3">menu3</option>
-                    <option value="menu4">menu4</option>
-                    <option value="menu5">menu5</option>
-                </select>
-            </div>
+            <section class="formule2 card-formule">
+                <h2>Formule événements</h2>
+                <p>Mariage, anniversaire, ....</p>
+                <h3>À partir de 500€</h3>
+                <ul>
+                    <li class="option">25 personnes minimums</li>
+                    <li class="option">Entrées + Plats + Desserts*</li>
+                    <li class="option">15€/personnes</li>
+                    <li class="option">Ramener des accéssoires</li>
+                    <li class="option">Choisir un thème</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
 
-            <div class="tarif">
+            <section class="formule3 card-formule">
+                <h2>Formule entreprise</h2>
+                <p>Pôts de départ, fête</p>
+                <h3>À partir de 800€</h3>
+                <ul>
+                    <li class="option">50 personnes minimums</li>
+                    <li class="option">Entrées + Plats*</li>
+                    <li class="option">14€/personnes</li>
+                </ul>
+                <div>
+                    *parmis la liste des produits disponibles
+                </div>
+            </section>
+        </article>
 
-            </div>
-        </form>
-
-        <form action="" id="contac">
+        <!-- CONTACTS -->
+        <form action="" id="contact">
             <h2>Contacts</h2>
 
-            <div id="nom-prenom">
+            <section class="nom-prenom">
                 <label for="nom-prenom">Nom et Prénom</label>
-                <input type="text" placeholder="Nom" id="nom">
-                <input type="text" placeholder="Prénom" id="prenom">
-            </div>
+                <div id="nom-prenom-input">
+                    <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
+                    <input type="text" placeholder="Votre prénom" id="prenom" name="prenom" required>
+                </div>
+            </section>
 
-            <label for="email">Adresse mail</label>
-            <input type="email">
+            <section class="email-telephone">
+                <div id="email">
+                    <label for="email">Adresse mail</label>
+                    <input type="email" required>
+                </div>
 
-            <label for="telephone">Numéro</label>
-            <input type="text">
+                <div id="telephone">
+                    <label for="telephone">Numéro</label>
+                    <input type="tel" id="phone" name="phone" pattern="(\d{2}\s){4}\d{2}" required>
+                </div>
+            </section>
 
-            <div class="evenement">
-                <label for="event">Les événements proposés</label>
+            <section class="evenement">
+                <label for="event">La formule voulu</label>
                 <select name="event" id="event">
-                    <option value="evenement1">evenement1</option>
-                    <option value="evenement2">evenement2</option>
-                    <option value="evenement3">evenement3</option>
-                    <option value="evenement4">evenement4</option>
-                    <option value="evenement5">evenement5</option>
+                    <option value="evenement1">Formule étudiante</option>
+                    <option value="evenement2">Formule événements</option>
+                    <option value="evenement3">Formule entreprise</option>
                 </select>
-            </div>
+            </section>
 
             <section class="date-hour">
                 <div class="date">
                     <label for="date">Le :</label>
-                    <input type="date">
+                    <input type="date" required>
                 </div>
 
                 <div class="hour">
-                    <label for="hour">De :</label>
-                    <input type="time" name="debut" id="debut">
+                    <label for="hour">; De :</label>
+                    <input type="time" name="debut" id="debut" required>
                     <label for="hour">à</label>
-                    <input type="time" name="end" id="end">
+                    <input type="time" name="end" id="end" required>
                 </div>
             </section>
 
@@ -84,7 +132,34 @@
             <textarea name="message" id="message">
 
             </textarea>
+
+            <div id="bouton">
+                <button type="submit">Envoyer</button>
+            </div>
         </form>
     </main>
+
+    <footer class="bottom-bar">
+        <div class="bottom-bar-content">
+            <div class="contact">
+                <h2 class="title-footer">Nous retrouver :</h2>
+                <p>Place de la Cathédrale</p>
+                <p>28000 Chartres</p>
+                <p>02 37 21 50 00</p>
+                <p>streetfusion@gmail.com</p>
+            </div>
+            <div class="reseaux">
+                <h2 class="title-footer">Nos réseaux :</h2>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="text-jsp">
+                <p>Tout droit réservé © 2025 Street Fusion</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

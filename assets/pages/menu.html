@@ -3,23 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./assets/js/script.js" defer></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Menu - Street Fusion</title>
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/menu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="top-bar">
+    <header id="topbar">
+        <img class="topbar-logo" src="../image/logo.svg" alt="image logo">
+        <nav class="topbar-nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="localisation.html">Localisation</a>
+            <a href="privatisation.html">Privatisation</a>
+        </nav>
     </header>
 
+    <!-- Section hero avec titre et boutons -->
+    <header class="hero-menu">
+        <img src="../image/background.jpg" alt="background" class="hero-background">
+        <p class="titre-header">Le Menu de street fusion</p>
+        <div class="hero-buttons">
+            <button class="bouton-menu">Menu</button>
+            <button class="bouton-formule">Formule</button>
+        </div>
+    </header>
+
+    <section class="formule-menu" id="formule-menu">
+        <div class="formule-carte" id="formule-carte">
+            <section class="formule" id="formule">
+                <h2>Formule enfant</h2>
+                <p class="formule-prix">10 €</p>
+                <p class="description-formule">Burger + Accompagnement(frites) + Boisson</p>
+            </section>
+
+            <section class="formule" id="formule">
+                <h2>Formule classique</h2>
+                <p class="formule-prix">15 €</p>
+                <p class="description-formule">Burger ou Tacos + Accompagnement + Boisson</p>
+            </section>
+        </div>
+    </section>
+
     <section class="menu" id="menu">
-        <h2>Menu de street fusion</h2>
         <div class="menu-container" id="menu-container">
             <section class="burger" id="burger">
-                <h2>Burgers</h2>
+                <h2>Burgers signature</h2>
             </section>
 
             <section class="tacos" id="tacos">
-                <h2>Tacos</h2>
+                <h2>Tacos fusion</h2>
             </section>
 
             <section class="accompagnement" id="accompagnement">
@@ -33,6 +71,26 @@
     </section>
 
     <footer class="bottom-bar">
+        <div class="bottom-bar-content">
+            <div class="contact">
+                <h2 class="title-footer">Nous retrouver :</h2>
+                <p>Place de la Cathédrale</p>
+                <p>28000 Chartres</p>
+                <p>02 37 21 50 00</p>
+                <p>streetfusion@gmail.com</p>
+            </div>
+            <div class="reseaux">
+                <h2 class="title-footer">Nos réseaux :</h2>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="text-jsp">
+                <p>Tout droit réservé © 2025 Street Fusion</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

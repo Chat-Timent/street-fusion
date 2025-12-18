@@ -1,14 +1,234 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
+   html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   TOPBAR (depuis accueil.css)
+   ======================================== */
+
+#topbar {
+    background-color: #2C3E50;
+    font-size: 2rem;
+    color: #ECF0F1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    padding: 0px 50px;
+    box-sizing: border-box;
+}
+
+.topbar-logo {
+    width: 150px;
+}
+
+.topbar-nav-links {
+    gap: 100px;
+    display: flex;
+    margin-left: auto;
+}
+
+.topbar-nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.topbar-nav-links a:visited {
+    color: inherit;
+}
+
+.topbar-nav-links a:hover {
+    color: #E67E22;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SECTION HERO MENU
+   ======================================== */
+
+.hero-menu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) blur(2px);
+    z-index: 1;
+}
+
+.hero-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 2;
+}
+
+/* Titre dans le hero */
+.titre-header {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9rem;
+    text-shadow: 0 6px 30px rgba(0,0,0,0.8);
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+/* Boutons dans le hero */
+.hero-buttons {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: 20px;
+}
+
+.bouton-menu,
+.bouton-formule {
+    background-color: #E67E22;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.bouton-menu:hover,
+.bouton-formule:hover {
+    background-color: #d06d18;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+}
+
+/* ========================================
+   SECTION FORMULE
+   ======================================== */
+
+.formule-menu {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+}
+
+.formule-carte {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.formule {
+    background-color: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.formule::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #E67E22, #2ECC71);
+}
+
+.formule:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+}
+
+.formule > h2 {
+    color: #2C3E50;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.formule-prix {
+    color: white;
+    background: linear-gradient(135deg, #E67E22, #d06d18);
+    padding: 20px 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+}
+
+.description-formule {
+    color: #666;
+    margin: 15px 0 0 0;
+    min-height: 50px;
+}
+
+/* ========================================
+   SECTION MENU
+   ======================================== */
+
 .menu {
     max-width: 1200px;
     margin: 40px auto;
+    margin-top: 0;
     padding: 20px;
 }
 
 .menu > h2 {
     text-align: center;
-    color: #ff6b35;
-    font-size: 32px;
-    margin-bottom: 30px;
+    color: #E67E22;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.menu > h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #E67E22, #2ECC71);
+    border-radius: 2px;
 }
 
 .menu-container {
@@ -17,58 +237,245 @@
     gap: 40px;
 }
 
+/* ========================================
+   CATÉGORIES (Burgers, Tacos, etc.)
+   ======================================== */
+
 .burger, .tacos, .accompagnement, .boisson {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .burger > h2, .tacos > h2, .accompagnement > h2, .boisson > h2 {
-    grid-column: 1 / -1;
-    color: #2d3561;
-    font-size: 24px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #ff6b35;
+    width: 100%;
+    color: #2C3E50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #E67E22;
+    text-transform: uppercase;
+    position: relative;
 }
+
+.burger > h2::before, .tacos > h2::before, .accompagnement > h2::before, .boisson > h2::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #2ECC71;
+}
+
+/* ========================================
+   CARTES PRODUIT
+   ======================================== */
 
 .menu-carte {
     background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex-shrink: 0;
+    position: relative;
 }
 
+.menu-carte::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #E67E22, #2ECC71);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+/* Nom du produit */
 .menu-nom {
-    color: #ff6b35;
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    color: #2C3E50;
+    margin: 0;
+    padding: 20px 20px 10px 20px;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
+.menu-nom::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    width: 40px;
+    height: 3px;
+    background-color: #E67E22;
+    transition: width 0.3s ease;
+}
+
+/* Image du produit */
 .menu-image {
     width: 100%;
-    height: 120px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
     background-color: #e0e0e0;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: brightness(0.95);
 }
 
+/* Description du produit */
 .menu-description {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    color: #555;
+    padding: 20px 25px;
+    flex-grow: 1;
+    background: linear-gradient(to bottom, transparent, rgba(230, 126, 34, 0.03));
+    position: relative;
 }
 
+.menu-description::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: rgba(230, 126, 34, 0.2);
+}
+
+/* Prix du produit */
 .menu-prix {
-    color: #2d3561;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: right;
+    color: white;
+    background: linear-gradient(135deg, #E67E22, #d06d18);
+    padding: 15px 20px;
+    margin: 0;
+    text-align: center;
+    position: relative;
 }
 
 .menu-prix::after {
     content: " €";
+}
+
+/* ========================================
+   ÉTATS HOVER
+   ======================================== */
+
+.menu-carte:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 35px rgba(230, 126, 34, 0.3);
+}
+
+.menu-carte:hover::before {
+    transform: scaleX(1);
+}
+
+.menu-carte:hover .menu-nom {
+    color: #E67E22;
+}
+
+.menu-carte:hover .menu-nom::after {
+    width: 80px;
+}
+
+.menu-carte:hover .menu-image {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.bottom-bar {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2C3E50 50%, #1a1a2e 100%);
+    margin-top: 80px;
+    padding: 60px 0 30px 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-bar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 40px;
+    color: #ECF0F1;
+}
+
+.contact, .reseaux {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reseaux {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.title-footer {
+    color: #E67E22;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contact p, .reseaux p {
+    margin: 5px 0;
+    color: #ECF0F1;
+    transition: color 0.3s ease;
+}
+
+.contact p:hover {
+    color: #E67E22;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.reseaux div {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.reseaux i {
+    color: #ECF0F1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 12px;
+    background: rgba(230, 126, 34, 0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reseaux i:hover {
+    color: white;
+    background: linear-gradient(135deg, #E67E22, #d06d18);
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: 0 5px 20px rgba(230, 126, 34, 0.5);
+}
+
+.text-jsp {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(236, 240, 241, 0.1);
+}
+
+.text-jsp p {
+    color: #95a5a6;
+    margin: 0;
 }
