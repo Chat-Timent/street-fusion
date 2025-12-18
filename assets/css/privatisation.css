@@ -115,7 +115,6 @@ h3 {
 
 .nom-prenom > #nom-prenom-input > input {
     flex-grow: 1;
-    
 }
 
 /* ====== EMAIL & TELEPHONE ====== */
@@ -133,11 +132,11 @@ h3 {
     flex-grow: 1;
 }
 
-#email > input:valid, #telephone > input:valid {
+#email > input:valid, #telephone > input:valid:focus {
     border-color: #2ECC71;
 }
 
-#email > input:invalid, #telephone > input:invalid {
+#email > input:invalid:focus, #telephone > input:invalid:focus {
     border-color: #cc2e2e;
 }
 
@@ -154,6 +153,7 @@ input, textarea, select {
     background-color: rgba(255, 255, 255, 0.097);
     font-size: var(--text-size-input);
     color: var(--text-color);
+    outline: none;
 }
 
 label {
